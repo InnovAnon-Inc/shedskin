@@ -2,6 +2,11 @@ FROM python:2
 
 RUN                             \
   apt update                 && \
+  apt install -y   \
+    g++            \
+    libpcre++-dev  \
+    python-all-dev \
+    libgc-dev                && \
   apt install -y shedskin    && \
   apt clean                  && \
   rm -rf                 \
